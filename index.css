@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between  ;
+    height: 5em;
+    border: 1px solid #FAC80F;
+    min-width: 100%;
+    width: 100%;
+}
+
+.logo{
+    height:100%;
+    margin: auto;
+}
+.logo img{
+    max-height: 100%;
+}
+
+nav{
+    width: 80%;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+li{
+    list-style: none;
+}
+
+li a{
+    text-decoration: none;
+    color: #009AD1;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 2fr 2fr 2fr;
+    grid-template-areas: 
+    "home home home home"
+    "sobre sobre sobre sobre"
+    "servicos servicos servicos servicos"
+    "depoimentos depoimentos depoimentos depoimentos"
+    "contatos contatos contatos contatos"
+    ;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    
+}
+
+#home{
+    grid-area: home;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    
+    padding:2em;
+    background-color: rgb(146, 50, 50);
+}
+#sobre{
+    grid-area: sobre;
+    text-align: center;
+    font-size: larger;
+    align-self: center;
+}
+#servicos{
+    grid-area: servicos;
+    text-align: center;
+    font-size: larger;
+    align-self: center;
+    
+}
+#depoimentos{
+    grid-area: depoimentos;
+    text-align: center;
+    font-size: larger;
+    align-self: center;
+    padding: 2em;
+}
+#depoimentos h2{
+    margin: 2em 0 2em 0;
+}
+#contato{
+    grid-area: contatos;
+    text-align: center;
+    font-size: larger;
+    background-color: rgb(146, 50, 50);
+}
+
+#servicos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr;
+    grid-template-areas:
+    "n-servicos n-servicos n-servicos n-servicos"
+    "servico1 servico2 servico3 servico4"
+    "servico1 servico2 servico3 servico4"
+    "servico1 servico2 servico3 servico4"
+    "servico1 servico2 servico3 servico4"
+    ;
+    background-color: rgb(146, 50, 50);
+}
+#n-servicos{
+    grid-area: n-servicos;
+    background-color: rgb(146, 50, 50);
+}
+
+#servico1{
+    grid-area: servico1;
+    
+}
+#servico2{
+    grid-area: servico2;
+}
+#servico3{
+    grid-area: servico3;
+}
+#servico4{
+    grid-area: servico4;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 5em;
+    background-color: #009AD1;
+    font-size: larger;
+}
+
+body, html{
+    overflow-x: hidden;
+}
+
+@media (max-width : 425px) {
+    header{
+        font-size:small ;
+    }
+}
