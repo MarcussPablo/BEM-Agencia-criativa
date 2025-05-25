@@ -1,8 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@use 'bases';
+@use 'variaveis';
+@use 'componentes';
+@use 'mixins';
+
+
 body{
     height: 100vh;
 }
@@ -12,9 +13,13 @@ header{
     align-items: center;
     justify-content: space-between  ;
     height: 5em;
-    border: 1px solid #FAC80F;
+    border: 1px solid variaveis.$primary-color;
     min-width: 100%;
     width: 100%;
+
+    @include mixins.celular{
+        font-size: small;
+    }
 }
 
 .logo{
@@ -40,7 +45,7 @@ li{
 
 .nav__list__link{
     text-decoration: none;
-    color: #009AD1;
+    color: variaveis.$secondary-color;
 }
 main{
     display: grid;
@@ -66,7 +71,7 @@ main{
     align-self: center;
     
     padding:2em;
-    background-color: rgb(146, 50, 50);
+    background-color: variaveis.$tertiary-color;
 }
 #sobre{
     grid-area: sobre;
@@ -80,6 +85,7 @@ main{
     font-size: larger;
     align-self: center;
     
+
 }
 #depoimentos{
     grid-area: depoimentos;
@@ -95,7 +101,7 @@ main{
     grid-area: contatos;
     text-align: center;
     font-size: larger;
-    background-color: rgb(146, 50, 50);
+    background-color: variaveis.$tertiary-color;
 }
 
 #servicos{
@@ -109,11 +115,17 @@ main{
     "servico1 servico2 servico3 servico4"
     "servico1 servico2 servico3 servico4"
     ;
-    background-color: rgb(146, 50, 50);
+    background-color: variaveis.$tertiary-color;
+
+        @include mixins.celular{
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
 #n-servicos{
     grid-area: n-servicos;
-    background-color: rgb(146, 50, 50);
+    background-color: variaveis.$tertiary-color;
 }
 
 #servico1{
@@ -137,16 +149,12 @@ footer{
     text-align: center;
     justify-content: center;
     padding: 5em;
-    background-color: #009AD1;
+    background-color: variaveis.$secondary-color;
     font-size: larger;
 }
+
 
 body, html{
     overflow-x: hidden;
 }
 
-@media (max-width : 425px) {
-    header{
-        font-size:small ;
-    }
-}

@@ -1,0 +1,16 @@
+@use 'variaveis';
+.btn__enviar{
+display: flex;
+text-align: center;
+justify-content: center;
+margin: 2em;
+
+& button{
+    border: none;
+    border-radius: 5px;
+    background-color: variaveis.$primary-color;
+}
+& button:hover{
+    color: variaveis.$tertiary-color;
+}
+}
